@@ -10,22 +10,19 @@
 </head>
 
 <body>
+  
     <div id="app">
-        <h1>Bienvenido {{ nombre }} {{ apellido }}</h1>
-        {{calle}}
+      <h2>My deepest, darkest question: {{existentialQuestion}}</h2>
+      <input v-model="existentialQuestion"/>
     </div>
 
     <script>
         var vm = new Vue({
             el: '#app',
             data: {
-                nombre: 'Anna mmmmmm',
-                apellido: "marcilla",
-                calle: 'calle'
+              existentialQuestion: 'Am I truly an alligator?' 
             }
         });
-
-        //vm.nombre='pepe'
     </script>
 </body>
 

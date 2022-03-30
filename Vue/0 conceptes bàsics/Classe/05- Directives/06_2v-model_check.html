@@ -10,22 +10,30 @@
 </head>
 
 <body>
+  
     <div id="app">
-        <h1>Bienvenido {{ nombre }} {{ apellido }}</h1>
-        {{calle}}
+        <p>A list of names that rhyme: {{namesThatRhyme}}</p>
+        <label>
+          <input type="checkbox" value="Daniel" v-model="namesThatRhyme"/>
+          Daniel
+        </label>
+        <label>
+          <input type="checkbox" value="Nathaniel" v-model="namesThatRhyme"/>
+          Nathaniel
+        </label>
+        <label>
+          <input type="checkbox" value="Hubert" v-model="namesThatRhyme"/>
+          Hubert
+        </label>
     </div>
 
     <script>
         var vm = new Vue({
             el: '#app',
             data: {
-                nombre: 'Anna mmmmmm',
-                apellido: "marcilla",
-                calle: 'calle'
+                namesThatRhyme: []  
             }
         });
-
-        //vm.nombre='pepe'
     </script>
 </body>
 

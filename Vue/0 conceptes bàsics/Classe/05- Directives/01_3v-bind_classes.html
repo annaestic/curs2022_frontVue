@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>  
+</head>
+
+<body>
+  <header>
+    <h1>Vue Dynamic Styling</h1>
+  </header>
+  <section id="styling">
+    <div class="demo" :class="{active: boxASelected}" @click="boxSelected('A')"></div>
+    <div :class="['demo', {active: boxBSelected}]" @click="boxSelected('B')"></div>
+    <div class="demo" :class="{active: boxCSelected}" @click="boxSelected('C')"></div>
+  </section>
+
+  <script>
+    const app = new Vue({
+      el: '#styling',
+      data() {
+        return {
+          boxASelected: false,
+          boxBSelected: false,
+          boxCSelected: false,
+        };
+      },
+      methods: {
+        boxSelected(box) {
+          if (box === 'A') {
+            this.boxASelected = !this.boxASelected;
+          } else if (box === 'B') {
+            this.boxBSelected = !this.boxBSelected;
+          } else if (box === 'C') {
+            this.boxCSelected = !this.boxCSelected;
+          }
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

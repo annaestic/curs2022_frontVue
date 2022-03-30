@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- Aquí vemos que hemos utilizado el modificador .lazy, por lo que el texto que escribamos en el <textarea> no se irá modificando en cada pulsación, sino que se actualizará cuando pulsemos TAB o salgamos del campo de texto (pierda el foco). Esto puede ser útil en algunas situaciones donde no queremos que dispare una función asociada muchas veces, o simplemente queremos que se actualice el texto sólo al salir del campo. -->
+    <div id="app">
+        <div>{{ userdata }}</div>
+        <textarea v-model.lazy="userdata" cols="80" rows="5"></textarea>       
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                userdata: "Valor de ejemplo"
+            }
+        });
+    </script>
+</body>
+
+</html>

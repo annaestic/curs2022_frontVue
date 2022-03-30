@@ -12,22 +12,35 @@
 <body>
     <div id="app"> </div>
 
-    <!--Podem treure el template -->
     <template id="ejemplo">
         <div>
             <div>
-                {{ mensaje }}</b>
+                <b>{{ mensaje }}</b>
+            </div>
+            <div>
+                <img v-bind:src="imagen" />
+            </div>
+            <div>
+                <button type="submit" v-bind:disabled="isFormEmpty">Entrar</button>
+            </div>
+            <div>
+                <a v-bind:href="urlPasswordChange" target="_blank">
+                    ¿Has olvidado tu contraseña?
+                </a>
             </div>
         </div>
     </template>
 
- 
+    <!--OJO això ha d'estar aquí al final -->
     <script>
         const app = new Vue({
             el: "#app",
             template: "#ejemplo",
             data: {
-                mensaje: "Benvingut a VUE....",
+                mensaje: "Benvingut a VUE",
+                imagen: "img/vue.jpg",
+                isFormEmpty: true,
+                urlPasswordChange: 'https://www.uoc.edu'
             }
         });
     </script>

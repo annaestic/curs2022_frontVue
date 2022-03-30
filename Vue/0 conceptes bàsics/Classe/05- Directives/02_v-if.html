@@ -10,22 +10,22 @@
 </head>
 
 <body>
+    <!-- v-if se mostrara si la variable seen == true -->
     <div id="app">
-        <h1>Bienvenido {{ nombre }} {{ apellido }}</h1>
-        {{calle}}
+        <h1>Bienvenido {{ nombre }}</h1>
+        <p v-if="seen">Espero que estés bien</p>
+        <p v-else>mejórate</p>
     </div>
 
     <script>
         var vm = new Vue({
             el: '#app',
             data: {
-                nombre: 'Anna mmmmmm',
-                apellido: "marcilla",
-                calle: 'calle'
+                nombre: 'Anna',
+                seen: true,
             }
         });
-
-        //vm.nombre='pepe'
+        vm.nombre= 'pepito'
     </script>
 </body>
 

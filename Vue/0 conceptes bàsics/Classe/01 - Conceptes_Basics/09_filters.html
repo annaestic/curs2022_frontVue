@@ -7,10 +7,12 @@
 
 <body>
    <div id="example">
-      
       <p>Mensaje inicial: {{ title }}: {{ message  }}</p>
       <p>Mensaje computado: {{  toupercase   }}</p>
-      <p>Mensaje filtrado: {{ message | lowercase   }}</p>
+      <p>Mensaje computado: {{  toupercase   }}</p>
+      <p>Mensaje filtrado: {{ message | formateaMinuscula   }}</p>
+      <p>title filtrado: {{ title | formateaMinuscula   }}</p>
+      <p>title filtrado: {{ nuevoTitulo | formateaMinuscula   }}</p>
       <input type="text" v-model="title">
       <p>Mensaje watch: {{ mayuscula  }}</p>
    </div>
@@ -20,8 +22,9 @@
          el: '#example',
          data: {
             title: 'Bienvenida',
+            nuevoTitulo: 'NOU titol',
             message: 'HEllo world',
-            mayuscula: '',
+            mayuscula: ''
          },
          computed: {
             toupercase: function () {
@@ -34,7 +37,7 @@
             },
          },
          filters: {
-            lowercase: function (value) {
+            formateaMinuscula: function (value) {
                return value.toLowerCase();
             }
          }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .no-dynamic {
+            background: grey;
+        }
+
+        .my-style {
+            border: 1px solid green;
+        }
+
+        .my-style-error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-app"></div>
+
+    <template id="estilos">
+        <div>
+            una clase estática
+            <input type="text" class="my-style">
+
+            <br>
+            Una clase estática y una dinámica en objeto: deshabilitat
+            <input type="text" class="no-dynamic" v-bind:class="error">
+
+            <br>
+            <!-- agafa 'no-dynamic' i complementa amb el que hi ha a myStyles-->>
+            enlace de clases en formato array
+            <input type="text" v-bind:class="['no-dynamic', myStyles]">
+
+            <br>
+            enlace de estilos
+            <input type="text" v-bind:style="myCSS">
+        </div>
+    </template>
+
+    <script>
+        const app = new Vue({
+            el: '#my-app',
+            template: '#estilos',
+            data: {
+                myError: 'my-style-error',
+                active: true,
+                error: false,
+                myStyles: {
+                    'no-dynamic': true,
+                    'my-style': true
+                },
+                myCSS: {
+                    background: 'red'
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
