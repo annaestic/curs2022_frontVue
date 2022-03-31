@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "pinaple",
+      "price": 0.8,
+      "priceDiscount": 0.7,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 2,
+      "name": "Pasta",
+      "price": 6.25,
+      "priceDiscount": 6,
+      "type": "grocery",
+      "img": "assets/img/shop_02.jpg",
+      "popularity": 4
+    }
+  ],
+  "cart": [
+    {
+      "idCart": 1,
+      "id": 1,
+      "name": "pinaple",
+      "price": 0.8,
+      "priceDiscount": 0.7,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 4,
+      "quantity": 1,
+      "subtotal": 0.8
+    },
+    {
+      "idCart": 1,
+      "id": 2,
+      "name": "Pasta",
+      "price": 6.25,
+      "priceDiscount": 6,
+      "type": "grocery",
+      "img": "assets/img/shop_02.jpg",
+      "popularity": 4,
+      "quantity": 1,
+      "subtotal": 6.25
+    },
+    {
+      "idCart": 1,
+      "id": 3,
+      "name": "cupcake",
+      "price": 5,
+      "priceDiscount": 5,
+      "type": "grocery",
+      "img": "assets/img/shop_03.jpg",
+      "popularity": 4,
+      "quantity": 1,
+      "subtotal": 5
+    }
+  ]
+}

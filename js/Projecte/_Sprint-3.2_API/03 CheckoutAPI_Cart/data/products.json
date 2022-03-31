@@ -1,0 +1,74 @@
+[
+    {
+    "id": 1,
+    "name": "oil",
+    "price": 10.5,
+    "type": "grocery",
+    "img": "assets/img/shop_01.jpg",
+    "popularity": 3
+    },
+    {
+    "id": 2,
+    "name": "Pasta",
+    "price": 6.25,
+    "type": "grocery",
+    "img": "assets/img/shop_02.jpg",
+    "popularity": 4
+    },
+    {
+    "id": 3,
+    "name": "cupcake",
+    "price": 5,
+    "type": "grocery",
+    "img": "assets/img/shop_03.jpg",
+    "popularity": 4
+    },
+    {
+    "id": 4,
+    "name": "All-in-one",
+    "price": 260,
+    "type": "beauty",
+    "img": "assets/img/shop_04.jpg",
+    "popularity": 3
+    },
+    {
+    "id": 5,
+    "name": "Make-up",
+    "price": 20.5,
+    "type": "beauty",
+    "img": "assets/img/shop_05.jpg",
+    "popularity": 2
+    },
+    {
+    "id": 6,
+    "name": "Lip Tints",
+    "price": 12.75,
+    "type": "beauty",
+    "img": "assets/img/shop_06.jpg",
+    "popularity": 2
+    },
+    {
+    "id": 7,
+    "name": "Lawn Dress",
+    "price": 15,
+    "type": "clothes",
+    "img": "assets/img/shop_07.jpg",
+    "popularity": 4
+    },
+    {
+    "id": 8,
+    "name": "Lawn-Chiffon",
+    "price": 19.99,
+    "type": "clothes",
+    "img": "assets/img/shop_08.jpg",
+    "popularity": 4
+    },
+    {
+    "id": 9,
+    "name": "Toddler",
+    "price": 9.99,
+    "type": "clothes",
+    "img": "assets/img/shop_09.jpg",
+    "popularity": 1
+    }
+]

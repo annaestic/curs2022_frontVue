@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop - Product Listing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Zay
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex" id="ModalListShop">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#ListShop">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <div class="container py-5">
+        <div class="col">
+            <div class="row">
+                <!-- Carrrito -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="items"></tbody>  
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="ListShop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="checkout.html"  class="modal-content modal-body border-0 p-0">
+                <!-- listing items starts -->
+                <div id="listProductes">
+                    <!-- Carrito MODAL -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                           </tr>
+                        </thead>
+                        <tbody id="itemsModal"></tbody>                    
+                        <tfoot>
+                            <tr id="footer" >
+                                <th colspan="4" align-text="right"></th>
+                                <th colspan="1" align-text="right" id="totalCarrito">ffff</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                    <div class="text-center">
+                        <a href="javascript:postCart()" class="btn btn-primary m-3">Checkout</a>
+                    </div>
+                </div>
+                <!-- listing items ends -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Search -->
+            <div class="col-lg-3">
+                <h1 class="h2 pb-4">Categories</h1>
+                <ul class="list-unstyled" id="categories">
+                    <li class="pb-3">
+                        <a class="h3 text-decoration-none prodGrocery" href="#">GROCERY</a>
+                    </li>
+                    <li class="pb-3">
+                        <a class="h3 text-decoration-none prodBeauty" href="#">BEAUTY</a>
+                    </li>
+                    <li class="pb-3">
+                        <a class="h3 text-decoration-none prodClothes" href="#">CLOTHES</a>
+                    </li>
+                    <li class="pb-3">
+                        <a class="h3 text-decoration-none prodTots" href="#">TOTS</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Search -->
+
+            <!-- CARDS -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="row" id="cards"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content -->
+    </div>
+
+    <template id="template-card">
+        <div class="col-md-3">
+            <div class="card mb-4 product-wap rounded-0">
+                <div class="card rounded-0">
+                    <img class="card-img rounded-0 img-fluid card-img1" src="">
+                    <div
+                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="btn btn-success text-white mt-2 cardAdd">
+                                    ADD
+                                </a>
+                            </li>
+                            <li><a class="btn btn-success text-white mt-2 cardRemove">
+                                    DEL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="font-weight-normal text-center"></h5>
+                    <h6 class="font-weight-normal text-center"></h6>
+                    <p class="text-center mb-0 text-center"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">id</th>
+            <td>Café</td>
+            <td>1</td>
+            <td>1</td>
+            <td>$ <span>500</span></td>
+        </tr>   
+    </template>
+
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="./js/cerca.js"></script>
+    <script src="./js/shop.js"></script>
+    <script src="./js/data.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>

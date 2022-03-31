@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="listProductes">
+        <ul id="list"></ul>
+        <div class="text-center">
+            
+        </div>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js"></script>    
+
+    <script>
+
+ console.table(products);
+        // Exercici 1: Afegim productes a la llista
+        console.log("Ex1: Afegim element a la CartList");
+        buy(3);
+        buy(2);
+        buy(1);
+        buy(1);
+        buy(2);
+        buy(3);
+        buy(6);
+        buy(8);
+        buy(9);
+        buy(9);
+        buy(9);
+        buy(9);
+        buy(9);
+        buy(9);
+        buy(10);
+        buy(11);
+
+        console.table(cartList)
+  
+      // Per saber com està el nostre carLlist  
+        ShowCartList(); 
+        console.log("\n");
+        
+
+        // Exercise 2: eliminem tots els productes de la CartList
+/*         console.log("Ex2: Eliminem productes a la CartList");
+        cleanCart();
+        ShowCartList(); 
+        console.log("\n"); */
+
+        // Exercise 3: Segons els elements inclosos en la CartList, afegir els subtotals al array 
+         console.log("Ex3: Calculem Subtotals");
+        calculateSubtotals();        
+        showPrices();
+        console.log("\n");
+ 
+        // Exercise 4: Calculate total price of the cart either using the "cartList" array
+         console.log("Ex4: Calcula Totals");
+        calculateTotal();        
+        console.log("\n");
+ 
+        // Exercise 5: Generate "cart" array that does not contain repeated items,
+/*         console.log("Ex5: Genera Cart sense repetits");
+        generateCart();
+        showCart();
+        console.log("\n"); */
+
+        // Exercici 6: Afegim promocions
+/*         console.log("Ex6: Promotions");
+        applyPromotionsCart();
+        showCart(); */
+
+        // Exercici 7: Eliminem producte de la Cart
+/*         console.log("Ex7: Eliminar prodcute de la Cart");
+        removeFromCart(1);
+        showCart(); */
+
+        // Exercici 8: Imprimim per pantalla
+ /*        console.log("Ex8: Imprimim productes de la Cart");
+        printCart(); */
+
+    </script>
+
+    
+</body>
+
+</html>
