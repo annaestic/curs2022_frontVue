@@ -8,14 +8,13 @@
 <body>
 
     <div style="text-align: center;" id="home">
-
         <!-- Rendering data to DOM -->
         <h1 style="color: seagreen;">{{title}}</h1>
         <h2>Title : {{name}}</h2>
         <h2>Topic : {{topic}}</h2>
         <!-- Calling function in methods -->
-        <h2>{{show()}}</h2>
-        <h2>{{showName('Pepe')}}</h2>
+        <h2>show sin parametro: {{ show()   }}</h2>
+        <h2>show con parametro: {{showName('Pepe')}}</h2>        
     </div>
 
 </body>
@@ -30,20 +29,22 @@
             name: "Vue.js",
             topic: "Instances"
         },
-
         // Creating methods
         methods: {
-
             // Creating function
             show: function () {
                 return "Welcome to this tutorial on " +
                     this.name + " - " + this.topic;
             },
             showName: function (nombre) {
-                return this.title + " " + nombre
+                let varLocal="hola";
+                return "Welcome to this tutorial on " +
+                varLocal + " " + nombre + " " + this.name + " - " + this.topic
             }
         }
     });
 </script>
+
+
 
 </html>

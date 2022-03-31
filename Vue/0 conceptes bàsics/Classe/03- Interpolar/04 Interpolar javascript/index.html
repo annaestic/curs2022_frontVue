@@ -11,22 +11,43 @@
   <div id="app"> </div>
 
   <template id="ejemplo">
-      <div>
-        <!--split: ens retorna array amb tots els caracters  -->
-        <!--Reverse: ens retorna dona l'array endreçat al revés  -->
-        <!--join: ens ho torna a convertir amb text  -->
-        <span><b>{{ mensaje.split('').reverse().join('') }}</b></span><br>
+    <div>
+      <!--split: ens retorna array amb tots els caracters  -->
+      <!--Reverse: ens retorna dona l'array endreçat al revés  -->
+      <!--join: ens ho torna a convertir amb text  -->
+      <span><b>{{ mensaje.split('').reverse().join('') }}</b></span><br>
 
-        <!--Sumem 1 a la variable number  -->
-        <span>{{ number + 1 }}</span><br>
+      <!--Sumem 1 a la variable number  -->
+      <span>{{ number  }}</span><br>
 
-        <!-- Mostrem el valor de la variable OK  -->
-        <span> {{ ok ? 'YES' : 'NO' }}</span>
-      </div>
+      <!-- Mostrem el valor de la variable OK  -->
+      <span> {{ ok ? 'YES' : 'NO' }}</span>
+
+      <button v-on:click="number++">Mas</button>
+      <button v-on:click="number-- ">Menos</button>
+      <button v-on:click="reset()">reset</button>
+    </div>
   </template>
 
   <!--OJO això ha d'estar aquí al final -->
-  <script src="js/app.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      template: "#ejemplo",
+      imagen: "img/vue.jpg",
+      data: {
+        mensaje: "Benvingut a VUE",
+        number: 10,
+        ok: true,
+      },
+      methods: {
+        // Creating function
+        reset: function () {
+          this.number = 0;                    
+        },
+      }
+    });
+  </script>
 </body>
 
 </html>
