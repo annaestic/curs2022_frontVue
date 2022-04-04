@@ -1,0 +1,50 @@
+<html>
+
+<head>
+   <title>VueJs Instance</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+   <div id="example">
+      <p>Mensaje inicial: {{ title }}: {{ message  }}</p>
+      <p>Mensaje computado: {{  toupercase   }}</p>
+      <p>Mensaje computado: {{  toupercase   }}</p>
+      <p>Mensaje filtrado: {{ message | formateaMinuscula   }}</p>
+      <p>title filtrado: {{ title | formateaMinuscula   }}</p>
+      <p>title filtrado: {{ nuevoTitulo | formateaMinuscula   }}</p>
+      <input type="text" v-model="title">
+      <p>Mensaje watch: {{ mayuscula  }}</p>
+   </div>
+
+   <script type="text/javascript">
+      var vm = new Vue({
+         el: '#example',
+         data: {
+            title: 'Bienvenida',
+            nuevoTitulo: 'NOU titol',
+            message: 'HEllo world',
+            mayuscula: ''
+         },
+         computed: {
+            toupercase: function () {
+               return this.title.toUpperCase();
+            }
+         },
+         watch: {
+            title: function (value) {
+               this.mayuscula = value.toUpperCase();
+            },
+         },
+         filters: {
+            formateaMinuscula: function (value) {
+               return value.toLowerCase();
+            }
+         }
+      })
+
+   
+   </script>
+</body>
+
+</html>

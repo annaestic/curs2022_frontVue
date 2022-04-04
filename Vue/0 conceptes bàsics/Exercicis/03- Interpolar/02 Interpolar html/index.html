@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+  <title>1e component VUE</title>
+</head>
+
+<body>
+  <div id="app"> </div>
+
+  <template id="ejemplo">
+    <div>
+      <div>
+        {{ mensaje }}<br>
+        <span v-html="mensajeHTML"></span>
+        <div v-html="mensajeHTML"></div>
+        <p v-html="mensajeHTML"></p>
+      </div>
+      <div>        
+        <a v-bind:href="url" v-bind:alt="url">
+          <img v-bind:src="imagen" />
+        </a>
+      </div>
+    </div>
+  </template>
+
+  <!--OJO això ha d'estar aquí al final -->
+  <script>
+    const app = new Vue({
+      el: "#app",
+      template: "#ejemplo",
+      data: {
+        mensaje: "<b>Això es un missatge sense format html</b>",
+        mensajeHTML: "<b>Esto es un mensaje HTML</b><br><br>",
+        imagen: "./img/vue.jpg",
+        url: "http://www.uoc.edu"
+      }
+    });
+  </script>
+</body>
+
+</html>

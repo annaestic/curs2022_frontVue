@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="my-app">
+        <h1> {{ message }}</h1>      
+        <ul>
+            <li v-for="(country, index) in countries" :value="index">{{ country }}</li>
+        </ul>
+        Filtre
+        <input type="text" v-model="country">        
+        <ul>
+            <li v-for="(country, index) in countriesFiltrered" :value="index">{{ country }}</li>
+        </ul>
+    </div>    
+    
+    <script>
+        const app = new Vue({
+            el: '#my-app',
+            data: {
+                    message: 'Us presento una serie de països, heu de fer un filtre fent servir una variable computada',
+                    country: '',
+                    countries: ['Alemania', 'USA', 'UK', 'Canada', 'SPAIN']
+            },
+
+            // Definimos propiedades computadas
+            computed: {
+              // Las computed nos ayudan para crear filtros
+                countriesFiltrered: function() {
+                    if (this.country === ''){
+                        return this.countries 
+                    } else {                        
+                        // Si volem filtrar el país sencer
+                        //return this.countries.filter(element => element.toUpperCase()===this.country.toUpperCase())
+                        // Si volem incloure el país a mida que l'escribim i volem incloure totes les aproximacions: 
+                        return this.countries.filter(element => element.toUpperCase().includes(this.country.toUpperCase()))
+                    }
+                }
+            },
+
+           
+        })
+    </script>
+</body>
+</html>

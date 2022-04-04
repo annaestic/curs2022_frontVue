@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+
+   <div style="text-align: center;" id="home">
+      <!-- Rendering data to DOM -->
+      <h1 style="color: seagreen;">{{title}}</h1>
+      <h2>Title : {{name}}</h2>
+      <!-- Calling function in methods -->
+      <h2>Topics: {{show()}}</h2>
+   </div>
+
+</body>
+<script type="text/javascript">
+   // Creating Vue Instance
+   var vm = new Vue({
+      // Assigning id of DOM in parameter
+      el: '#home',
+      // Assigning values of parameter
+      data: {
+         title: "Geeks for Geeks",
+         name: "Vue.js",
+         topic: ["Instances","examples","lessons"]
+      },
+
+      // Creating methods
+      methods: {
+         // Creating function
+         show: function () {
+            return (this.topic.length);
+         }
+      }
+   });
+</script>
+
+</html>

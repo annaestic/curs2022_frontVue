@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VueJS 2.0 - image slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>     
+  </head>
+
+  <body>
+    <div id="main">
+        <!-- The navigation menu will get the value of the "active" variable as a class. -->
+     <nav v-bind:class="active" >
+
+        <!-- When a link in the menu is clicked, we call the makeActive method, 
+        defined in the JavaScript Vue instance. It will change the value of "active". -->
+
+        <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+        <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
+        <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
+        <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+    </nav>
+
+     <!-- The mustache expression will be replaced with the value of "active".
+          It will automatically update to reflect any changes. -->
+    <p>You chose <b>{{active}}</b></p>
+</div>
+    
+    
+    
+    <script src="script.js"></script>
+  </body>
+
+</html>

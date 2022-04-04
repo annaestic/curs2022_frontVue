@@ -1,0 +1,38 @@
+<html>
+
+<head>
+   <title>VueJs Instance</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+   <div id="example">
+      <p>Mensaje original: "{{ message }}"</p>
+      <!-- podem fem servir javascript dins del codi VUE -->
+      {{ message.split('').reverse().join('') }}
+      <!-- pero és millor treballar amb variables -->
+      <p>Mensaje inverso computado: "{{ reversedMessage }}"</p>
+   </div>
+
+   <script type="text/javascript">
+      var vm = new Vue({
+         el: '#example',
+         data: {
+            message: 'hola'
+         },
+         computed: {
+            reversedMessage: function () {
+               return this.message.split('').reverse().join('')
+            }
+         }
+      })
+
+      // En nuestro codigo JS podemos llamar al componente y ponerle información
+      // tantas veces como queramos.
+      console.log(vm.reversedMessage) // => 'olleH'
+      vm.message = 'Esto es una prueba'
+      console.log(vm.reversedMessage) // => 'eybdooG' */
+   </script>
+</body>
+
+</html>
