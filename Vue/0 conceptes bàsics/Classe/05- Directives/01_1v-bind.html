@@ -18,13 +18,13 @@
                 <b>{{ mensaje }}</b>
             </div>
             <div>
-                <img v-bind:src="imagen" />
+                <img :src="imagen" />
             </div>
             <div>
-                <button type="submit" v-bind:disabled="isFormEmpty">Entrar</button>
+                <button type="submit" :disabled="isFormEmpty">Entrar</button>
             </div>
             <div>
-                <a v-bind:href="urlPasswordChange" target="_blank">
+                <a :href="urlPasswordChange" target="_blank">
                     ¿Has olvidado tu contraseña?
                 </a>
             </div>
@@ -39,7 +39,7 @@
             data: {
                 mensaje: "Benvingut a VUE",
                 imagen: "img/vue.jpg",
-                isFormEmpty: true,
+                isFormEmpty: false,
                 urlPasswordChange: 'https://www.uoc.edu'
             }
         });

@@ -11,8 +11,8 @@
 
 <body>
     <ul id="example-1">
-        <li v-for="item in items" :key="item.id">
-            {{ item.message }} - {{item.id}}
+        <li v-for="element in array" :key="element.id">
+            {{ element.message }} - {{element.id}}
         </li>
     </ul>
 
@@ -20,7 +20,7 @@
         var example1 = new Vue({
             el: '#example-1',
             data: {
-                items: [{
+                array: [{
                     id: 1,
                     message: 'mensaje uno'
                 }, {

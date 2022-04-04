@@ -6,23 +6,27 @@
    </head>
    <body>
       <div id = "databinding">
-         <button v-on:click = "displaynumbers">Click ME</button>
+        
          <!-- També podriem @click: 
-         <button @click = "displaynumbers">Click ME</button>-->         
-         <h2> Add Number 100 + 200 = {{total}}</h2>
+         <button @click = "displaynumbers">Click ME</button>-->     
+         <input type="number" v-model="num1">    
+         <input type="number" v-model="num2">    
+         <button v-on:click = "displaynumbers">Click ME</button>
+         <h2>{{num1}} + {{num2}} = {{total}}</h2>
       </div>
       <script type = "text/javascript">
          var vm = new Vue({
             el: '#databinding',
             data: {
-               num1: 100,
-               num2 : 200,
-               total : ''
+               num1: 0,
+               num2 : 0,
+               total : 0
             },
             methods : {
                displaynumbers : function(evento) {
                   console.log(evento);
-                  return this.total =  this.num1+ this.num2;
+                 /*  return this.total =  parseInt(this.num1)+ parseInt(this.num2); */
+                 return this.total = +(this.num1) + this.num2; 
                }
             },
          });

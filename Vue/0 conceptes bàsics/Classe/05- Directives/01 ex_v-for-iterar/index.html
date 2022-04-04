@@ -11,50 +11,55 @@
 
 <body>
     <div id="my-app">
-        <b>ejercicio 1</b> 
+        <b>ejercicio 1</b>
         <!--Iterar array con index:  Muestra la nota de cada estudiante i muestra el indice del array:  -->
-       <ul>
-           <li></li>
-       </ul>
+        <ul>
+            <li></li>
+        </ul>
 
-       <b>ejercicio 2</b> 
-       <!-- Acceder a la propiedad del estudiante 0,  -->
-       <p>  </p>
+        <b>ejercicio 2</b>
+        <!-- Acceder a la propiedad del primer estudiante   -->
+        <p> </p>
 
-       <b>ejercicio 3</b> 
-       <!-- Iterar un objeto con key: Muestra todos los atributos de student -->
-       <p></p>
+        <b>ejercicio 3</b>
+        <!-- Iterar un objeto con key: Muestra todos los atributos de student -->
+        <p></p>
 
-       <b>ejercicio 4</b> 
-       <!-- Iterar un rango: Itera la variable i hasta 10  -->
-       <div>
-          <p></p>
-       </div>
+        <b>ejercicio 4</b>
+        <!-- Iterar un rango: Itera la variable i hasta 10  -->
+        <div>
+            <p></p>
+        </div>
 
-       <b>ejercicio 5</b> 
-       <!-- v-for con v-if: Muestra todos los estudiantes con nota > 5 -->
-       <ul>
-           <li></li>
-       </ul>
+        <b>ejercicio 5</b>
+        <!-- v-for con v-if: Muestra todos los estudiantes con nota > 5 -->
+        <ul>
+            <li></li>
+        </ul>
     </div>
-    
+
     <script>
         const app = new Vue({
             el: '#my-app',
-
-            data() {
-                return {
-                    i: 0,
-                    students: [
-                        { name: 'Noe', note: 10 },
-                        { name: 'Manu', note: 10 },
-                        { name: 'Belén', note: 5 }
-                    ],
-                    student: {
-                        name: 'Carlos',
-                        lastname: 'Rodriguez',
+            data: {
+                i: 0,
+                students: [{
+                        name: 'Noe',
                         note: 10
+                    },
+                    {
+                        name: 'Manu',
+                        note: 10
+                    },
+                    {
+                        name: 'Belén',
+                        note: 5
                     }
+                ],
+                student: {
+                    name: 'Carlos',
+                    lastname: 'Rodriguez',
+                    note: 10
                 }
             },
         })

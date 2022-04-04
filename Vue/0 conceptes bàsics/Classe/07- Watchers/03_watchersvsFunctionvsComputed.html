@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>VueJs Instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="watch-example">
+        <div id="app">
+            Type the first number:
+            <input type="number" v-model.number="n1"><br />
+            Type the second number:
+            <input type="number" v-model.number="n2"><br /><br />
+            Con computed <br>
+            The sum() is: {{ total }}<br /><br />
+
+            Con una funcion <br>
+            The sum() is: {{ sum() }}<br /><br />
+
+            Con watch <br>
+            The sum2 is: {{ sum2 }}<br /><br />
+        </div>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                n1: 0,
+                n2: 0,
+                sum2: 0
+            },
+            // Creem la propietat calculada quan fem la crida a la operació
+            // per exemple amb botó
+            computed: {
+                total() {
+                    return this.n1 + this.n2;
+                }
+            },
+            // Per retornar el total, cridem al mètode que calcula
+            methods: {
+                sum: function () {
+                    return this.n1 + this.n2;
+                }
+            },
+            // quan canvia el valor del input es canvia la suma
+            watch: {
+                n1: function (value) {
+                    this.sum2 = this.n2 + value
+                },
+                n2: function (value) {
+                    this.sum2 = this.n1 + value
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

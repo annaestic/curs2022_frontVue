@@ -29,16 +29,16 @@
     <template id="estilos">
         <div>
             una clase estática
-            <input type="text" class="my-style">
+            <input type="text" class="my-style" >
 
             <br>
             Una clase estática y una dinámica en objeto: deshabilitat
-            <input type="text" class="no-dynamic" v-bind:class="error">
+            <input type="text" class="no-dynamic" :class="myError">
 
             <br>
             <!-- agafa 'no-dynamic' i complementa amb el que hi ha a myStyles-->>
             enlace de clases en formato array
-            <input type="text" v-bind:class="['no-dynamic', myStyles]">
+            <input type="text" :class="['no-dynamic', myStyles]">
 
             <br>
             enlace de estilos
@@ -55,8 +55,8 @@
                 active: true,
                 error: false,
                 myStyles: {
-                    'no-dynamic': true,
-                    'my-style': true
+                    'no-dynamic': false,
+                    'my-style': false
                 },
                 myCSS: {
                     background: 'red'

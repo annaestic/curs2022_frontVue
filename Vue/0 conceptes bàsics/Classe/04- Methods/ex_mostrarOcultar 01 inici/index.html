@@ -13,8 +13,8 @@
   <template id="ejemplo">
     <div>     
         <b>{{ mensaje }}</b>
-        <img :src="imagen" />      
-      <button @click="toggleMostrar">Mostrar/Ocultar</button>
+        <img v-bind:src="imagen" />      
+      <button v-on:click="toggleMostrar">Mostrar/Ocultar</button>
     </div>
   </template>  
 
