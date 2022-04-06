@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="my-app">
+        {{Benvinguda}}                                     
+        <user-detail first="Maria" last="Perez" ></user-detail>        
+        <user-detail v-bind:first='firstName' v-bind:last='lastName' ></user-detail> 
+        <!-- Como Usamos CamelCase, no se mostrarà -->
+        <user-err v-bind:firstname='firstName' v-bind:lastname='lastName' ></user-err> 
+        <user-detallado v-bind:first='firstName' v-bind:last='lastName' v-bind:edat='edat' ></user-detallado> 
+        <!-- Sin edat que es requiered, nos darà warning -->
+        <user-detallado v-bind:first='firstName' v-bind:last='lastName'  ></user-detallado> 
+        <!-- Enviamos como edat un string .. nos funciona, pero tambien nos darà warning -->
+        <user-detallado v-bind:first='firstName' v-bind:last='lastName' edat='15' ></user-detallado> 
+    </div>
+
+    <script src="./components/user-err.js"></script>
+    <script src="./components/user-detail.js"></script>
+    <script src="./components/user-detallado.js"></script>
+    <script src="./components/app.js"></script>
+
+</body>
+</html>
