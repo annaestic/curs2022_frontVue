@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="my-app">
+        <h1>{{ name }}</h1>
+        <h2>El primer botó esta a dins del objecte VUE </h2>
+        <h3>{{ firstName }} - {{ lastName}}</h3>
+        <!-- Cridem directamente al Objecte de VUE -->
+        <button @click="onAdd">{{ count }} boto objecte VUE</button>
+
+        <h2>El segon botó està fet amb un component </h2>
+        <!-- Cridem a un component de VUE -->
+        <my-button></my-button>
+        <my-button></my-button>
+        <my-button></my-button>
+        <my-button></my-button>
+        <user-detail first="testfffff"></user-detail>
+
+        <user-detail first="Maria" last="Perez" ></user-detail>        
+        <user-detail v-bind:first='firstName' v-bind:last='lastName' ></user-detail> 
+        <!-- Como Usamos CamelCase, no se mostrarà -->
+        <user-detallado v-bind:firstName='firstName' v-bind:lastName='lastName' v-bind:edat='edat' ></user-detallado> 
+        <!-- Sin edat que es requiered, nos darà warning -->
+        <user-detallado v-bind:first='firstName' v-bind:last='lastName'  ></user-detallado> 
+        <!-- Enviamos como edat un string .. nos funciona, pero tambien nos darà warning -->
+        <user-detallado v-bind:first='firstName' v-bind:last='lastName' edat='15' ></user-detallado> 
+    </div>
+
+    <template id="boto">
+        <div>
+            <button @click="onAdd">{{ count }} boto component</button><br>
+        </div>
+    </template>
+
+    <!-- OJO, fiquem aquest component primer, ja que l'estem cridant al my-app -->
+    <script src="my-button.js"></script>
+    <script src="user-detail.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
