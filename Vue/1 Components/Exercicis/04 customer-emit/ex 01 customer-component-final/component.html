@@ -1,0 +1,77 @@
+<html>
+
+<head>
+   <title>VueJs Instance</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+   <style>
+      #databinding {
+         padding: 20px 15px 15px 15px;
+         margin: 0 0 25px 0;
+         width: auto;
+      }
+
+      span,
+      option,
+      input {
+         font-size: 20px;
+      }
+
+      .Table {
+         display: table;
+         width: 80%;
+      }
+
+      .Title {
+         display: table-caption;
+         text-align: center;
+         font-weight: bold;
+         font-size: larger;
+      }
+
+      .Heading {
+         display: table-row;
+         font-weight: bold;
+         text-align: center;
+      }
+
+      .Row {
+         display: table-row;
+      }
+
+      .Cell {
+         display: table-cell;
+         border: solid;
+         border-width: thin;
+         padding-left: 5px;
+         padding-right: 5px;
+         width: 30%;
+      }
+   </style>
+
+
+
+   <div id="databinding">
+      <h1>Customer Details</h1>
+      <span>First Name</span>
+      <input type="text" placeholder="Enter First Name" v-model="fname" />
+      <span>Last Name</span>
+      <input type="text" placeholder="Enter Last Name" v-model="lname" />
+      <span>Address</span>
+      <input type="text" placeholder="Enter Address" v-model="addr" />
+      <button v-on:click="showdata">Add</button>
+      <br /> <br />
+     
+       <customercomponent v-for="(item, index) in custdet"   v-bind:itr="item" v-bind:index="index" v-bind:key="item.fname"
+         v-on:removeelement="eliminar($event, index)">
+      </customercomponent> 
+   </div>
+
+   <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript" src="customercomponent.js"></script>
+
+</body>
+
+</html>
