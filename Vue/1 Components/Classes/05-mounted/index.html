@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="databinding">
+        <div>
+            Mi nombre es <input v-model="author" id="nom" value="Anna" ref="apellido">
+            Mi apellido es <input id="apellido" value="Anna" ref="nombre">
+            <p ref="parrafo"></p>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#databinding',
+            data() {
+                return {
+                    author: "Manz"
+                }
+            },
+            beforeCreate() {
+                console.log("BeforeCreated **** ");
+                console.log("Encara no tenim les dades");
+                console.log(this.author);
+            },
+            //Created: Se ejecuta un poco antes del mounted, aún no tenemos el DOM
+            created() {
+                console.log("created **** ");
+                console.log("Ja tenim accés a les dades");
+                console.log(this.author);
+                let getNom = document.getElementById('nom').value;
+                console.log("NOM" + getNom);
+                // Acces al DOM
+                console.log(this.$refs.apellido);
+                console.log(this.$refs.nombre);
+                console.log(this.$refs.parrafo);
+            },
+            //Mounted: Para accedir al DOM, actuaremos en mounted
+            mounted() {
+                console.log("MOUNTED ****");
+                console.log("Ja tenim accés al DOM");
+                let getNom = document.getElementById('nom').value;
+                console.log(getNom);
+                // Acces al DOM
+                console.log(this.$refs.apellido);
+                console.log(this.$refs.nombre);
+                console.log(this.$refs.parrafo);                
+            }            
+        })
+        
+        console.log("Accedemos al DOM, por JV via instancia VUE");
+        console.log(vm.$refs);
+        console.log(vm.$refs.parrafo);
+    </script>
+</body>
+
+</html>
