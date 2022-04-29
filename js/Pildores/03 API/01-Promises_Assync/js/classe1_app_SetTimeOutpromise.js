@@ -19,6 +19,10 @@ calcula
     console.log("Retorna")
     console.log(result);
 })
+.then(result => {
+    console.log("Retorna")
+    console.log(result);
+})
 .catch(error =>  {
     console.log(error);
 });

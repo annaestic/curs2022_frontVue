@@ -15,6 +15,8 @@ async function inici() {
     try {
         await calcula();
         await calcula();
+        await calcula();
+        await calcula();
     } catch (error) {
         console.log(error)
     }

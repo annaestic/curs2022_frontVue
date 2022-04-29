@@ -3,17 +3,20 @@ async function calcula() {
     console.log("Comencem a calcular");
     setTimeout(function () {
         sum = 4 + 5 +'b';
-        if (isNaN(sum)) {
+        if (isNaN(sum)) {            
             console.log('Error while calculating sum.');
+            return "error";
+            
         } else {
             console.log(sum);
+            return sum;
         }
     }, 2000);
 };
 
 async function inici() {
-    await calcula();
-    await calcula();
+    sum = await calcula();
+    sum = await calcula();
     console.log("Crida a calcula() acabada ");
 }
 

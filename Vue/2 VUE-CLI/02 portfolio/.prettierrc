@@ -1,0 +1,14 @@
+{
+    "trailingComma": "none",
+    "singleQuote": true,
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "excludeFiles": ["jsconfig.json"],
+            "files": ["*.json"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

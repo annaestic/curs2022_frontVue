@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop - Product Listing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">                
+                <div class="row" id="cards"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <template id="template-card">
+        <div class="col-md-3 cardProduct" >
+            <div class="card mb-4 product-wap rounded-0">
+                <div class="card rounded-0">
+                    <img class="card-img rounded-0 img-fluid card-img1" src="">
+                    <div
+                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="btn btn-success text-white mt-2 cardAdd" data-id="X">
+                                    <i class="fas fa-cart-plus"></i>
+                                </a>
+                            </li>
+                            <li><a class="btn btn-success text-white mt-2 cardRemove" data-id="X">
+                                    <i class="fas fa-trash-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="font-weight-normal text-center">NOMBRE PRODUCTO</h5>
+                    <h6 class="font-weight-normal text-center">TYPE</h6>
+                    <p class="text-center mb-0 text-center">PREU</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Start Script -->
+    <script src="js/data.js"></script>
+    <script src="js/shop_04printTemplateCard.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>

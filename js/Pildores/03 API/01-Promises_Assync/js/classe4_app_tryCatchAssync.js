@@ -2,13 +2,12 @@
 
 function descargarClientes() {
     return new Promise((resolve, reject) => {
-        const error = true;
-
+        const todoOk = true;
         setTimeout( () => {
-            if(!error) {
-                resolve('El Listado de Clientes se descargo correctamente'); 
+            if(todoOk) {
+                resolve('El Listado de Clientes se descargo correctamente');                 
             } else {
-                reject('No se pudo aplicar el descuento');                
+                reject('No se pudo aplicar el descuento');                                
             }            
         }, 3000);
 
@@ -19,12 +18,11 @@ function descargarClientes() {
 async function ejecutar() {
     try {
         // Deten la ejecución hasta que sea ejecutado...
-        await descargarClientes(); 
+        respuesta = await descargarClientes(); 
         console.log(respuesta);
     } catch (error) {
         console.log(error)
     }
-
 }
 
 ejecutar();

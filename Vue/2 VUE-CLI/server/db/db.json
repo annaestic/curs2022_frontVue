@@ -1,0 +1,135 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "pinaple",
+      "price": 0.8,
+      "priceDiscount": 0.7,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 2,
+      "name": "Pasta",
+      "price": 6.25,
+      "priceDiscount": 6,
+      "type": "grocery",
+      "img": "assets/img/shop_02.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 3,
+      "name": "cupcake",
+      "price": 5,
+      "priceDiscount": 5,
+      "type": "grocery",
+      "img": "assets/img/shop_03.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 4,
+      "name": "All-in-one",
+      "price": 260,
+      "priceDiscount": 255,
+      "type": "beauty",
+      "img": "assets/img/shop_04.jpg",
+      "popularity": 3
+    },
+    {
+      "id": 5,
+      "name": "Make-up",
+      "price": 20.5,
+      "priceDiscount": 20,
+      "type": "beauty",
+      "img": "assets/img/shop_05.jpg",
+      "popularity": 2
+    },
+    {
+      "id": 6,
+      "name": "Lip Tints",
+      "price": 12.75,
+      "priceDiscount": 12.75,
+      "type": "beauty",
+      "img": "assets/img/shop_06.jpg",
+      "popularity": 2
+    },
+    {
+      "id": 7,
+      "name": "Lawn Dress",
+      "price": 15,
+      "priceDiscount": 15,
+      "type": "clothes",
+      "img": "assets/img/shop_07.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 8,
+      "name": "Lawn-Chiffon",
+      "price": 19.99,
+      "priceDiscount": 19,
+      "type": "clothes",
+      "img": "assets/img/shop_08.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 9,
+      "name": "Toddler",
+      "price": 9.99,
+      "priceDiscount": 9.8,
+      "type": "clothes",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 1
+    },
+    {
+      "id": 10,
+      "name": "PIJAMA",
+      "price": 12,
+      "priceDiscount": 10,
+      "type": "clothes",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 4
+    },
+    {
+      "id": 11,
+      "name": "apple",
+      "price": 1.5,
+      "priceDiscount": 1.5,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 4
+    },
+    {
+      "name": "melonnnnn",
+      "price": 10.5,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 1,
+      "id": 13
+    },
+    {
+      "name": "green orange",
+      "price": 10.5,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 1,
+      "id": 14
+    },
+    {
+      "name": "green orange",
+      "price": 10.5,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 1,
+      "id": 15
+    },
+    {
+      "name": "green orange",
+      "price": 10.5,
+      "type": "grocery",
+      "img": "assets/img/shop_09.jpg",
+      "popularity": 1,
+      "id": 16
+    }
+  ]
+}

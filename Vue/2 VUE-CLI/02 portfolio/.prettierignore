@@ -1,0 +1,12 @@
+.vscode/
+.github/
+.cache/
+.nuxt/
+.git/
+
+node_modules/
+dist/
+
+.eslintcache
+.DS_Store
+.env

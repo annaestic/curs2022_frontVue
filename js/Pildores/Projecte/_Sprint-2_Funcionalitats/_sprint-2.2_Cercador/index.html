@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS MODERN</h1>
+    <!-- DADES -->
+    <script src="./js/data.js"></script>
+    <!-- CODI jAVASCRIPT -->
+    <script src="./js/index.js"></script>
+    <script src="./js/cerca.js"></script>
+
+    <script>
+        // Exercise 1: Get the array of all Products.
+        console.log("****************************************");
+        console.log("exercic 1");
+        getAllProducts();
+        console.log("****************************************");
+        console.log("\n");
+
+        // Exercise 2: Get the Products of a certain Type
+        console.log("****************************************");
+        console.log("exercic 2");
+        getProductsFromCategory('beauty');
+        getProductsFromCategory('clothes');
+        getProductsFromCategory('grocery');
+        console.log("****************************************");
+        console.log("\n");
+
+
+        // Exercise 3: Calculate el numero de productos populats popularity==4
+        console.log("exercic 3");
+        getProductsByPopularity(4);
+        console.log("****************************************");
+        console.log("\n");
+
+        // Exercise 4:  Alphabetic order Products by title 
+        console.log("exercic 4");
+        orderAlphabetically();
+        console.log("****************************************");
+        console.log("\n");
+
+        // Exercise 4:  Alphabetic order Products by type
+        console.log("exercic 5");
+        orderByCategory();
+        console.log("****************************************");
+        console.log("\n");
+
+    </script>
+</body>
+
+</html>
